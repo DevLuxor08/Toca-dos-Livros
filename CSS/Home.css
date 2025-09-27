@@ -1,0 +1,158 @@
+
+:root{
+  /* COR PAGINA */
+  --cor-pagina: #f4f4f4;
+
+  /* Botôes */
+  --cor-bts:#205A8C;
+  --cor-bts-hover: #26528D;
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    background-color: var(--cor-pagina);
+}
+
+/* HEADER */
+.header-main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+}
+
+/* IMAGEM LOGO*/
+.img-logo{
+  border-radius: 25px;
+}
+
+/* NAV - TOPO SITE*/
+.nav-master{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-list-main{
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+}
+
+nav{
+    display: flex;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative; /* importante para o submenu ficar alinhado */
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: black;
+  font-size: 25px;
+}
+
+nav ul li .submenu {
+  display: none; /* escondido inicialmente */
+  position: absolute;
+  top: 100%; /* logo abaixo do item */
+  left: 0;
+  background: #f4f4f4;
+  padding: 10px;
+  list-style: none;
+  border-radius: 5px;
+}
+
+nav ul li:hover .submenu {
+  display: block; /* aparece ao passar o mouse */
+}
+
+
+/* MAIN*/
+.main-main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* TITULO PRINCIPAL*/
+.title-main{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  font-size: 30px;
+  /* Definir fonte */
+}
+
+/* GRID LINKS */
+
+.grid-main{
+  display: flex;
+  width: 100%;
+  height: 150px;
+}
+
+.page-content {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 200px;
+    z-index: 1; 
+
+   
+    display: flex;
+    justify-content: center; 
+    gap: 35px;
+    align-items: center; 
+}
+
+
+.central-link {
+    /* Design do texto */
+    font-size: 2vw; 
+    font-weight: bold;
+    color: #FFFFFF; 
+    text-decoration: none; 
+    
+    
+    background-color: var(--cor-bts); 
+    padding: 15px 30px;
+    border-radius: 8px;
+    
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    
+    
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.central-link:hover {
+    background-color: var(--cor-bts-hover); 
+    transform: scale(1.05); 
+}
+
+
+.background-grid-container {
+    
+}
