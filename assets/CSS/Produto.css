@@ -1,0 +1,302 @@
+:root {
+  /* COR PAGINA */
+  --cor-pagina: #f4f4f4;
+
+  /* Botões */
+  --cor-bts: #205A8C;
+  --cor-bts-hover: #26528D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.header-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+}
+
+/* IMAGEM LOGO */
+.logo {
+  border-radius: 45px;
+}
+
+/* NAV - TOPO SITE */
+.nav-master {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-list-main {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative; /* importante para o submenu ficar alinhado */
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: black;
+  font-size: 25px;
+}
+
+nav ul li .submenu {
+  display: none; /* escondido inicialmente */
+  position: absolute;
+  top: 100%; /* logo abaixo do item */
+  left: 0;
+  background: #f4f4f4;
+  padding: 10px;
+  list-style: none;
+  border-radius: 5px;
+}
+
+nav ul li:hover .submenu {
+  display: block; /* aparece ao passar o mouse */
+}
+
+/* TITULO PAGINA */
+.title-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  margin-top: 35px;
+}
+
+.title-i {
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+/* PRODUTOS */
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.produto {
+  position: relative;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.produto img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.descricao {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 75px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.produto:hover .descricao {
+  opacity: 1;
+}
+
+.nome {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== POPUP ===== */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+
+}
+
+.overlay:target {
+  display: block;
+}
+
+.popup {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.popup img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.popup h2 {
+  margin: 15px 0 10px;
+}
+
+.popup p {
+  font-size: 22px;
+  color: #333;
+}
+
+.popup a.popup-link-number{
+  text-decoration: none;
+}
+
+.popup a.fechar {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 6px 12px;
+  background: crimson;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .produto img {
+    height: 300px;
+  }
+
+  .descricao {
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .nome {
+    font-size: 16px;
+  }
+
+  .popup {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .produto {
+    margin: 10px 0;
+  }
+}
+
+/* FOOTER */
+
+footer {
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+footer a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    color: #333;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+@media (max-width: 480px) {
+    footer ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

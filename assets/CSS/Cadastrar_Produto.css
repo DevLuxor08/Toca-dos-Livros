@@ -1,0 +1,228 @@
+:root{
+  /* COR PAGINA */
+  --cor-pagina: #f4f4f4;
+
+  /* Botôes */
+  --cor-bts:#205A8C;
+  --cor-bts-hover: #26528D;
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* HEADER */
+.header-main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+}
+
+/* IMAGEM LOGO*/
+.logo{
+  border-radius: 45px;
+}
+
+/* NAV - TOPO SITE*/
+.nav-master{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-list-main{
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+}
+
+nav{
+    display: flex;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative; /* importante para o submenu ficar alinhado */
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: black;
+  font-size: 25px;
+}
+
+nav ul li .submenu {
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background: #f4f4f4;
+  padding: 10px;
+  list-style: none;
+  border-radius: 5px;
+}
+
+nav ul li:hover .submenu {
+  display: block; /* aparece ao passar o mouse */
+}
+
+.title-main{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-i{
+  font-size: 30px;
+  /* Definir fonte */
+}
+
+
+/* Formulário */
+.form-produto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.label-prod{
+  font-size: 18px;
+}
+
+.form-produto input,
+.form-produto textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* BOTÂO PRÉ-VISUALIZAR */
+.btn-preview {
+  text-align: center;
+  background: #205A8C;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn-preview:hover {
+  background: #26528D;
+}
+
+/* POPUP */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  width: 320px;
+  text-align: center;
+}
+
+.popup img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.popup .fechar {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 10px;
+  background: #205A8C;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #6c757d;
+}
+
+footer nav {
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: #495057;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 1rem;
+    }
+    
+    footer ul {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}

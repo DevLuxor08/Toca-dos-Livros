@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/Home.css">
+    <link rel="stylesheet" href="./assets/CSS/Home.css">
     <title>Home</title>
 </head>
 
@@ -13,21 +13,22 @@
 
             <!-- IMAGEM LOGO-->
             <div class="img-logo">
-                <img class="logo" src="./img/TocadosLivros.png" alt="Logo Toca dos Livros">
+                <a href="./index.html"><img class="logo" src="./assets/img/TocadosLivros.png"
+                        alt="Logo Toca dos Livros"></a>
             </div>
 
             <!-- LIST LINKADOS -->
             <div class="nav-list-main">
                 <ul class="nav-list">
                     <li class="nav-list-comp"><a href="./index.html">Início</a></li>
-                    <li class="nav-list-comp"><a href="./produto_index.html">Produtos</a></li>
+                    <li class="nav-list-comp"><a href="./produto.html">Produtos</a></li>
                     <li class="nav-list-comp">
                         <a href="#">Serviços ▾</a>
                         <ul class="submenu">
-                            <li><a href="./cadastrarProduto_index.html">Cadastrar Produto</a></li>
+                            <li><a href="./cadastrarProduto.html">Cadastrar Produto</a></li>
                         </ul>
                     </li class="nav-list-comp">
-                    <li class="nav-list-comp"><a href="./paginadoAluno_index.html">Pagina do Aluno</a></li>
+                    <li class="nav-list-comp"><a href="./paginadoAluno.html">Pagina do Aluno</a></li>
                 </ul>
             </div>
 
@@ -35,31 +36,59 @@
     </header>
 
     <main> <!-- CONTEUDO PRINCIPAL -->
-        <div class="main-main">
-            <!--Texto Principal -->
-            <div class="title-main">
-                <h1 class="title">Aqui você encontra histórias e anuncia as suas</h1>
-            </div>
-
-            <!-- GRIND LINKADAS-->
-            <div class="grid-main">
-                <div class="grid-container">
-                    <div class="grid-item cover-1"></div>
-                    <div class="grid-item cover-2"></div>
-                    <div class="grid-item cover-3"></div>
-                </div>
-
-                <div class="page-content">
-                    <a href="./produto_index.html" class="central-link">Produto</a>
-                    <a href="." class="central-link">Serviços</a>
-                    <a href="./produto_index.html" class="central-link">Aluno</a>
-                </div>
-            </div>
+        <!--Texto Principal -->
+        <div class="title-main">
+            <h1 class="title">Aqui você encontra histórias e anuncia as suas!</h1>
         </div>
+
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Categorias em Destaque</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon">📚</div>
+                        <h3>Ficção</h3>
+                        <p>Romances, Suspense, Fantasia</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🎓</div>
+                        <h3>Acadêmicos</h3>
+                        <p>Didáticos, Universitários</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">👶</div>
+                        <h3>Infantil</h3>
+                        <p>Para pequenos leitores</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">💝</div>
+                        <h3>Romance</h3>
+                        <p>Histórias de amor</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🎨</div>
+                        <h3>Arte & Cultura</h3>
+                        <p>Arte, Cinema, Música</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">📊</div>
+                        <h3>Negócios</h3>
+                        <p>Administração, Economia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer><!-- INFERIOR SITE -->
-
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 Seu Site. Todos os direitos reservados.</p>
     </footer>
 </body>
 

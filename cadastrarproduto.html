@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/CSS/Cadastrar_Produto.css">
+    <title>Cadastro de Produtos</title>
+</head>
+
+<body>
+    <header class="header-main">
+        <nav class="nav-master">
+
+            <!-- IMAGEM LOGO-->
+            <div class="img-logo">
+                <a href="./index.html"><img class="logo" src="./assets/img/TocadosLivros.png"
+                        alt="Logo Toca dos Livros"></a>
+            </div>
+
+            <!-- LIST LINKADOS -->
+            <div class="nav-list-main">
+                <ul class="nav-list">
+                    <li class="nav-list-comp"><a href="./index.html">Início</a></li>
+                    <li class="nav-list-comp"><a href="./produto.html">Produtos</a></li>
+                    <li class="nav-list-comp">
+                        <a href="#">Serviços ▾</a>
+                        <ul class="submenu">
+                            <li><a href="./cadastrarProduto.html">Cadastrar Produto</a></li>
+                        </ul>
+                    </li class="nav-list-comp">
+                    <li class="nav-list-comp"><a href="./paginadoAluno.html">Pagina do Aluno</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-information">
+            <div class="title-main">
+                <p class="title-i">Cadastrar Produto</p>
+            </div>
+
+            <!-- FORMULÁRIO -->
+            <form class="form-produto" action="#" method="post">
+                <label class="label-prod">Nome do Produto</label>
+                <input type="text" name="nome" required>
+
+                <label class="label-prod">Valor (R$)</label>
+                <input type="number" name="valor" step="0.01" required>
+
+                <label class="label-prod">Contato (WhatsApp)</label>
+                <input type="text" name="contato" placeholder="(18) 99999-9999" required>
+
+                <label class="label-prod">Descrição</label>
+                <textarea name="descricao" rows="3" required></textarea>
+
+                <label class="label-prod">Imagem (URL)</label>
+                <input type="url" name="imagem" placeholder="Cole o link da imagem" required>
+
+                <a href="#previewPopup" class="btn-preview">Pré-visualizar</a>
+            </form>
+        </div>
+
+        <!-- POPUP DE PRÉ-VISUALIZAÇÃO (APENAS EXEMPLO) -->
+        <div id="previewPopup" class="overlay">
+            <div class="popup">
+                <img src="https://via.placeholder.com/200" alt="Prévia Produto">
+                <h2>Nome do Produto</h2>
+                <p>R$ 00,00</p>
+                <p>Descrição do produto...</p>
+                <a href="https://wa.me/5518999999999" target="_blank">
+                    <p>Contato: (18)99999-9999</p>
+                </a>
+                <a href="#" class="fechar">Fechar</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 Seu Site. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
